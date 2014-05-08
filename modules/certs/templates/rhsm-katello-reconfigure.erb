@@ -18,8 +18,7 @@
 
 KATELLO_SERVER=<%= has_variable?("fqdn") ? @fqdn : @hostname %>
 PORT=443
-<% if scope.lookupvar("katello::params::deployment") == 'katello' 
-     || $has_variable(is_katello_devel) && @is_katello_devel "%>
+<% if scope.lookupvar("katello::params::deployment") == 'katello' || has_variable(is_katello_devel) && @is_katello_devel %>
 BASEURL=https://$KATELLO_SERVER/pulp/repos
 <% else %>
 BASEURL=https://$KATELLO_SERVER:8088
