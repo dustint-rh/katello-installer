@@ -59,6 +59,7 @@
 #
 # $group::                The group who should own the certs;
 #                         default 'foreman'
+#                        default nil
 #
 # $password_file_dir::    The location to store password files
 #
@@ -90,6 +91,8 @@ class certs (
 
   $user   = $certs::params::user,
   $group  = $certs::params::group,
+  $is_katllo_devel = $certs::params::is_katllo_devel,
+  $katello_deployment_url = $certs::params::katllo_deployment_url,
 
   $default_ca_name = $certs::params::default_ca_name
 

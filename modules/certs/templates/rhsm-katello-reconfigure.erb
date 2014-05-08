@@ -18,12 +18,15 @@
 
 KATELLO_SERVER=<%= has_variable?("fqdn") ? @fqdn : @hostname %>
 PORT=443
-<% if scope.lookupvar("katello::params::deployment") == 'katello' %>
+<% if scope.lookupvar("katello::params::deployment") == 'katello' 
+     || $has_variable(is_katello_devel) && @is_katello_devel "%>
 BASEURL=https://$KATELLO_SERVER/pulp/repos
 <% else %>
 BASEURL=https://$KATELLO_SERVER:8088
 <% end %>
-PREFIX=/<%=scope.lookupvar("katello::params::deployment_url")%>/api
+
+DEPLOYMENT_URL=<%= scope.lookupvar("katello::params::deployment_url") ||@katello_deployment_url %>
+PREFIX=/$DEPLOYMENT_URL/api
 CFG=/etc/rhsm/rhsm.conf
 CFG_BACKUP=$CFG.kat-backup
 
