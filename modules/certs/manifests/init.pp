@@ -59,7 +59,12 @@
 #
 # $group::                The group who should own the certs;
 #                         default 'foreman'
-#                        default nil
+#
+# $is_katllo_devel::      some blah
+#                         default nil
+#
+# $katello_deployment_url::  some blah
+#                            default 'katello'
 #
 # $password_file_dir::    The location to store password files
 #
