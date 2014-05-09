@@ -1,6 +1,5 @@
 # Katello specific certs settings
-class certs::katello {
-
+class certs::katello ($katello_devel = false, $deployment_url = nil){
   $katello_www_pub_dir            = '/var/www/html/pub'
   $candlepin_consumer_name        = "${$certs::default_ca_name}-consumer-${::fqdn}"
   $candlepin_consumer_summary     = "Subscription-manager consumer certificate for Katello instance ${::fqdn}"
