@@ -25,7 +25,6 @@ BASEURL=https://$KATELLO_SERVER/pulp/repos
 <% else %>
 BASEURL=https://$KATELLO_SERVER:8088
 <% end %>
-
 DEPLOYMENT_URL=<%= scope.lookupvar("katello::params::deployment_url") || @deployment_url %>
 PREFIX=/$DEPLOYMENT_URL/api
 CFG=/etc/rhsm/rhsm.conf

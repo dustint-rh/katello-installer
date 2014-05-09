@@ -3,7 +3,6 @@ certs:
   group: vagrant
   deploy: true
   generate: true
-  is_katello_devel: true
 katello_devel:
   deployment_dir: /home/vagrant
   user: vagrant

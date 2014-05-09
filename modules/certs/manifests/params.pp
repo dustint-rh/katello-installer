@@ -39,8 +39,6 @@ class certs::params {
 
   $user = 'root'
   $group = 'root'
-  $is_katello_devel = false
-  $katello_deployment_url=  'katello'
 
   $foreman_client_cert    = '/etc/foreman/client_cert.pem'
   $foreman_client_key     = '/etc/foreman/client_key.pem'
