@@ -5,7 +5,7 @@ forge 'http://forge.puppetlabs.com'
 #################################################################
 
 # Dependencies
-mod 'puppetlabs/postgresql', :git => 'https://github.com/puppetlabs/puppetlabs-postgresql'
+mod 'puppetlabs/postgresql', :git => 'https://github.com/puppetlabs/puppetlabs-postgresql', :ref => '3.2.0'
 mod 'puppetlabs/mysql', :git => 'https://github.com/puppetlabs/puppetlabs-mysql', :ref => '2.2.0'
 mod 'puppetlabs/firewall', :git => 'https://github.com/puppetlabs/puppetlabs-firewall', :ref => '1.0.0'
 mod 'puppetlabs/vcsrepo'
@@ -28,14 +28,14 @@ mod 'theforeman/puppet', :git => 'https://github.com/theforeman/puppet-puppet'
 # Katello specific modules
 mod 'katello/common', :git => 'https://github.com/Katello/puppet-common'
 mod 'katello/candlepin', :git => 'https://github.com/Katello/puppet-candlepin'
-mod 'katello-capsule', :git => 'https://github.com/Katello/puppet-capsule'
-mod 'katello-certs', :git => 'https://github.com/Katello/puppet-certs'
-mod 'katello-elasticsearch', :git => 'https://github.com/Katello/puppet-elasticsearch'
-mod 'katello/katello', :git => 'https://github.com/Katello/puppet-katello'
-mod 'katello-pulp', :git => 'https://github.com/Katello/puppet-pulp'
-mod 'katello/qpid', :git => 'https://github.com/Katello/puppet-qpid'
-mod 'katello-service_wait', :git => 'https://github.com/Katello/puppet-service_wait'
+mod 'katello/capsule', :git => 'https://github.com/Katello/puppet-capsule'
+mod 'katello/certs', :path=> '../puppet-certs'
+mod 'katello/elasticsearch', :git => 'https://github.com/Katello/puppet-elasticsearch'
+mod 'katello/katello', :path=> '../puppet-katello'
+mod 'katello/pulp', :git => 'https://github.com/Katello/puppet-pulp'
+mod 'katello/qpid', :path => '../puppet-qpid'
+mod 'katello/service_wait', :git => 'https://github.com/Katello/puppet-service_wait'
 mod 'puppetlabs/mongodb', :git => 'https://github.com/puppetlabs/puppetlabs-mongodb'
 
 # Katello devel specific modules
-mod 'katello-katello_devel', :git => 'https://github.com/Katello/puppet-katello_devel'
+mod 'katello/katello_devel', :path => '../puppet-katello_devel'

@@ -105,6 +105,11 @@ class katello_devel (
 
   Class['certs'] ~>
   Class['certs::qpid'] ~>
+  class { 'qpid::client': } ~>
+  class { 'katello::qpid':
+    client_cert => $certs::qpid::client_cert,
+    client_key  => $certs::qpid::client_key,
+  } ~>
   class { 'certs::pulp_parent': } ~>
   class { 'pulp':
     oauth_key                   => $katello_devel::oauth_key,
@@ -118,6 +123,8 @@ class katello_devel (
     consumers_ca_key            => $certs::ca_key,
     consumers_crl               => $candlepin::crl_file,
   }
+
+  User <| title == $user |>  { groups +> $certs::qpid::qpidd_group }
 
   class{ 'elasticsearch': }
 }
