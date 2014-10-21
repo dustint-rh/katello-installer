@@ -30,7 +30,7 @@ class qpid (
   $ssl_cert_db            = 'UNSET',
   $ssl_cert_password_file = 'UNSET',
   $ssl_cert_name          = 'UNSET',
-
+  $group                  = $qpid::params::group,
   $user_groups            = $qpid::params::user_groups
 
   ) inherits qpid::params {

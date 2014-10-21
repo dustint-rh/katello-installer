@@ -75,7 +75,8 @@ class katello_devel (
     deployment_url => '/rhsm'
   } ~>
   class { 'certs::qpid':
-    require => Class['qpid::install']
+    qpidd_group => $qpid::group,
+    require     => Class['qpid::install']
   } ~>
   class { 'katello_devel::install': } ~>
   class { 'katello_devel::config': } ~>
@@ -105,12 +106,6 @@ class katello_devel (
 
   Class['certs'] ~>
   Class['certs::qpid'] ~>
-  class { 'qpid::client': } ~>
-  class { 'katello::qpid':
-    client_cert  => $certs::qpid::client_cert,
-    client_key   => $certs::qpid::client_key,
-    katello_user => $user
-  } ~>
   class { 'certs::pulp_parent': } ~>
   class { 'pulp':
     oauth_key                   => $katello_devel::oauth_key,
@@ -123,6 +118,14 @@ class katello_devel (
     consumers_ca_cert           => $certs::ca_cert,
     consumers_ca_key            => $certs::ca_key,
     consumers_crl               => $candlepin::crl_file,
+  } ~>
+  class { 'qpid::client': } ~>
+  class { 'katello::qpid':
+    client_cert  => $certs::qpid::client_cert,
+    client_key   => $certs::qpid::client_key,
+    katello_user => $user,
+    qpidd_group => $qpid::group,
+    require     => Class['qpid::install']
   } ~>
   class { 'crane':
     cert    => $certs::ca_cert,
