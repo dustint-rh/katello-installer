@@ -1,0 +1,92 @@
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] Executing hooks in group boot
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] All hooks in group boot finished
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] Executing hooks in group init
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] All hooks in group init finished
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] Parsing default values from puppet modules...
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] ... finished
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] Executing hooks in group pre_values
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] All hooks in group pre_values finished
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] Executing hooks in group pre_validations
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] All hooks in group pre_validations finished
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] Running validation checks
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] Executing hooks in group pre
+[[32m INFO[0m [34m2014-10-21 12:10:32[0m [36mverbose[0m] All hooks in group pre finished
+[[32m INFO[0m [34m2014-10-21 12:10:33[0m [36mverbose[0m]  Loading facts
+[[32m INFO[0m [34m2014-10-21 12:10:33[0m [36mverbose[0m]  Loading facts
+[[32m INFO[0m [34m2014-10-21 12:10:33[0m [36mverbose[0m]  Loading facts
+[[32m INFO[0m [34m2014-10-21 12:10:33[0m [36mverbose[0m]  Loading facts
+[[32m INFO[0m [34m2014-10-21 12:10:33[0m [36mverbose[0m]  Loading facts
+[[33m WARN[0m [34m2014-10-21 12:10:39[0m [36mverbose[0m]  Config file /etc/puppet/hiera.yaml not found, using Hiera defaults
+[[33m WARN[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m]  Compiled catalog for centos7-katello-dev-2.usersys.redhat.com in environment production in 7.38 seconds
+[[33m WARN[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m]  The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m]    (at /usr/share/ruby/vendor_ruby/puppet/type/package.rb:430:in `block (3 levels) in <module:Puppet>'; /usr/share/ruby/vendor_ruby/puppet/type.rb:813:in `set_default'; /usr/share/ruby/vendor_ruby/puppet/type.rb:2285:in `block in set_parameters'; /usr/share/ruby/vendor_ruby/puppet/type.rb:2284:in `each'; /usr/share/ruby/vendor_ruby/puppet/type.rb:2284:in `set_parameters'; /usr/share/ruby/vendor_ruby/puppet/type.rb:2222:in `initialize'; /usr/share/ruby/vendor_ruby/puppet/resource.rb:355:in `new'; /usr/share/ruby/vendor_ruby/puppet/resource.rb:355:in `to_ral'; /usr/share/ruby/vendor_ruby/puppet/resource/catalog.rb:512:in `block in to_catalog'; /usr/share/ruby/vendor_ruby/puppet/resource/catalog.rb:504:in `each'; /usr/share/ruby/vendor_ruby/puppet/resource/catalog.rb:504:in `to_catalog'; /usr/share/ruby/vendor_ruby/puppet/resource/catalog.rb:407:in `to_ral'; /usr/share/ruby/vendor_ruby/puppet/application/apply.rb:220:in `block in main'; /usr/share/ruby/vendor_ruby/puppet/context.rb:64:in `override'; /usr/share/ruby/vendor_ruby/puppet.rb:244:in `override'; /usr/share/ruby/vendor_ruby/puppet/application/apply.rb:193:in `main'; /usr/share/ruby/vendor_ruby/puppet/application/apply.rb:154:in `run_command'; /usr/share/ruby/vendor_ruby/puppet/application.rb:384:in `block (2 levels) in run'; /usr/share/ruby/vendor_ruby/puppet/application.rb:510:in `plugin_hook'; /usr/share/ruby/vendor_ruby/puppet/application.rb:384:in `block in run'; /usr/share/ruby/vendor_ruby/puppet/util.rb:488:in `exit_on_fail'; /usr/share/ruby/vendor_ruby/puppet/application.rb:384:in `run'; /usr/share/ruby/vendor_ruby/puppet/util/command_line.rb:146:in `run'; /usr/share/ruby/vendor_ruby/puppet/util/command_line.rb:92:in `execute'; /usr/bin/puppet:8:in `<main>')
+[[31mERROR[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m]  Parameter groups failed on User[foreman]: Validate method failed for class groups: undefined method `include?' for :undef:Symbol at /root/katello-installer/modules/foreman/manifests/config.pp:42
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/type/user.rb:271:in `block (3 levels) in <module:Puppet>'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/parameter.rb:465:in `validate'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/property.rb:563:in `block in should='
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/property.rb:563:in `each'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/property.rb:563:in `should='
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/property.rb:615:in `value='
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/type.rb:654:in `[]='
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/type.rb:2272:in `block in set_parameters'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/type.rb:2266:in `each'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/type.rb:2266:in `set_parameters'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/type.rb:2222:in `initialize'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/resource.rb:355:in `new'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/resource.rb:355:in `to_ral'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/resource/catalog.rb:512:in `block in to_catalog'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/resource/catalog.rb:504:in `each'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/resource/catalog.rb:504:in `to_catalog'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/resource/catalog.rb:407:in `to_ral'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application/apply.rb:220:in `block in main'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/context.rb:64:in `override'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet.rb:244:in `override'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application/apply.rb:193:in `main'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application/apply.rb:154:in `run_command'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application.rb:384:in `block (2 levels) in run'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application.rb:510:in `plugin_hook'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application.rb:384:in `block in run'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/util.rb:488:in `exit_on_fail'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application.rb:384:in `run'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/util/command_line.rb:146:in `run'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/util/command_line.rb:92:in `execute'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/bin/puppet:8:in `<main>'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] Wrapped exception:
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] Validate method failed for class groups: undefined method `include?' for :undef:Symbol
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/type/user.rb:271:in `block (3 levels) in <module:Puppet>'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/parameter.rb:465:in `validate'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/property.rb:563:in `block in should='
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/property.rb:563:in `each'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/property.rb:563:in `should='
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/property.rb:615:in `value='
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/type.rb:654:in `[]='
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/type.rb:2272:in `block in set_parameters'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/type.rb:2266:in `each'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/type.rb:2266:in `set_parameters'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/type.rb:2222:in `initialize'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/resource.rb:355:in `new'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/resource.rb:355:in `to_ral'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/resource/catalog.rb:512:in `block in to_catalog'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/resource/catalog.rb:504:in `each'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/resource/catalog.rb:504:in `to_catalog'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/resource/catalog.rb:407:in `to_ral'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application/apply.rb:220:in `block in main'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/context.rb:64:in `override'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet.rb:244:in `override'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application/apply.rb:193:in `main'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application/apply.rb:154:in `run_command'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application.rb:384:in `block (2 levels) in run'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application.rb:510:in `plugin_hook'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application.rb:384:in `block in run'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/util.rb:488:in `exit_on_fail'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/application.rb:384:in `run'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/util/command_line.rb:146:in `run'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/share/ruby/vendor_ruby/puppet/util/command_line.rb:92:in `execute'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] /usr/bin/puppet:8:in `<main>'
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] Puppet has finished, bye!
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] Executing hooks in group post
+  [1m[31mSomething went wrong![0m Check the log for ERROR-level output
+  The full log is at [1m[36m/var/log/katello-installer/katello-installer.log[0m
+[[32m INFO[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] All hooks in group post finished
+[[31mERROR[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m] Repeating errors encountered during run:
+[[31mERROR[0m [34m2014-10-21 12:10:46[0m [36mverbose[0m]  Parameter groups failed on User[foreman]: Validate method failed for class groups: undefined method `include?' for :undef:Symbol at /root/katello-installer/modules/foreman/manifests/config.pp:42
