@@ -2,9 +2,15 @@
 #
 # Handles Qpid configuration
 #
-class qpid::config {
+class qpid::config (
+  $user  = $qpid::params::user,
+  $group = $qpid::params::group
+){
 
-  user { 'qpidd':
+  group { $user :
+    ensure => present
+  } ->
+  user { $group :
     ensure => present,
     groups => [$qpid::user_groups],
   }
