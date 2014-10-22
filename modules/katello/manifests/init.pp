@@ -67,7 +67,7 @@ class katello (
   class { 'katello::install': } ~>
   class { 'katello::config': } ~>
   class { 'certs::qpid':
-    qpidd_group => 'qpidd'
+    qpidd_group => $qpid::group,
   } ~>
   class { 'certs::candlepin': } ~>
   class { 'candlepin':
@@ -106,8 +106,6 @@ class katello (
     client_cert  => $certs::qpid::client_cert,
     client_key   => $certs::qpid::client_key,
     katello_user => $katello::user,
-    qpidd_group => 'qpidd',
-    require     => Class['qpid::install']
   } ~>
   class{ 'elasticsearch': } ~>
   Exec['foreman-rake-db:seed']
