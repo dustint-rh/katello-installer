@@ -1,11 +1,10 @@
 # Handles Qpid cert configuration
 class certs::qpid (
 
-  $hostname    = $::certs::node_fqdn,
-  $generate    = $::certs::generate,
-  $regenerate  = $::certs::regenerate,
-  $deploy      = $::certs::deploy,
-  $qpidd_group = $::certs::qpidd_group
+  $hostname   = $::certs::node_fqdn,
+  $generate   = $::certs::generate,
+  $regenerate = $::certs::regenerate,
+  $deploy     = $::certs::deploy,
   ){
 
   Exec { logoutput => 'on_failure' }
@@ -53,7 +52,7 @@ class certs::qpid (
     file { $::certs::nss_db_dir:
       ensure => directory,
       owner  => 'root',
-      group  => $qpidd_group,
+      group  => $certs::qpidd_group,
       mode   => '0755',
     } ~>
     exec { 'generate-nss-password':
@@ -64,7 +63,7 @@ class certs::qpid (
     file { $nss_db_password_file:
       ensure => file,
       owner  => 'root',
-      group  => $qpidd_group,
+      group  => $certs::qpidd_group,
       mode   => '0640',
     } ~>
     exec { 'create-nss-db':
@@ -79,7 +78,7 @@ class certs::qpid (
     } ~>
     file { $nssdb_files:
       owner => 'root',
-      group => $qpidd_group,
+      group => $certs::qpidd_group,
       mode  => '0640',
     } ~>
     exec { 'add-broker-cert-to-nss-db':

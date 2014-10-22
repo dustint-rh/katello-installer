@@ -7,10 +7,10 @@ class qpid::config (
   $group = $qpid::params::group
 ){
 
-  group { $user :
+  group { $group:
     ensure => present
   } ->
-  user { $group :
+  user { $user:
     ensure => present,
     groups => [$qpid::user_groups],
   }
