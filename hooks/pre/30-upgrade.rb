@@ -2,6 +2,22 @@ def migrate_candlepin
   Kafo::Helpers.execute("/usr/share/candlepin/cpdb --update --password #{Kafo::Helpers.read_cache_data('candlepin_db_password')}")
 end
 
+def migrate_gutterball
+  tomcat_dir = Kafo::Helpers.read_cache_data('gutterball_tomcat')
+  username = Kafo::Helpers.read_cache_data('gutterball_db_user')
+  password = Kafo::Helpers.read_cache_data('gutterball_db_password')
+  migration_command = <<-END_OF_COMMAND
+/usr/bin/liquibase --driver=org.postgresql.Driver \
+        --classpath=/usr/share/java/postgresql-jdbc.jar:/var/lib/#{tomcat_dir}/webapps/gutterball/WEB-INF/classes/ \
+        --changeLogFile=db/changelog/changelog.xml \
+        --url=jdbc:postgresql:gutterball \
+        --username=#{username}\
+        --password=#{password}\
+        update
+END_OF_COMMAND
+  Kafo::Helpers.execute(migration_command)
+end
+
 def migrate_pulp
   # Fix pid if neccessary
   if Kafo::Helpers.execute("grep -qe '7.[[:digit:]]' /etc/redhat-release")
@@ -37,6 +53,7 @@ if app_value(:upgrade)
   if Kafo::Helpers.module_enabled?(@kafo, 'katello')
     upgrade_step :migrate_candlepin
     upgrade_step :migrate_foreman
+    upgrade_step :migrate_gutterball
   end
 
   Kafo::Helpers.log_and_say :info, 'Upgrade Step: Running installer...'
